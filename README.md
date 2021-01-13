@@ -11,3 +11,5 @@ Run the nextflow pipeline:
 ```
 nextflow run busco.nf -profile farm -c busco.config --genomes_dir [absolute/path/to/genomes/directory]
 ```
+
+busco_env.yml will allow you to create a working busco conda environment
