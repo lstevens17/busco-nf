@@ -6,7 +6,7 @@ params.outdir = "busco-${date}"
 input_genomes = Channel.fromPath("${params.genomes_dir}/*fa", checkIfExists: true).map{ file -> tuple(file.simpleName, file) }
 
 process run_busco {
-	conda "/nfs/users/nfs_l/ls30/miniconda3/envs/busco_env/"
+	conda "$HOME/miniconda3/envs/busco_env/"
 	publishDir "${params.outdir}", mode: 'copy'
 	errorStrategy 'ignore'
 	queue 'long'	
